@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<script>
+function chk()
+{
+var stat=true;
+if(document.adminLoginForm.email.value.length==0)
+{
+document.getElementById("loginMsg").innerHTML="Required**";
+stat=false;
+}
+if(document.adminLoginForm.password.value.length==0)
+{
+document.getElementById("passMsg").innerHTML="Required**";
+stat=false;
+}
+return(stat);
+}
+function clearLoginMesg()
+{
+if(document.adminLoginForm.email.value.length>0)
+{
+document.getElementById("loginMsg").innerHTML=" ";
+}
+}
+function clearPassMesg()
+{
+if(document.adminLoginForm.password.value.length>0)
+{
+document.getElementById("passMsg").innerHTML=" ";
+}
+}
+</script>
+</head>
+
+<body background="image/bg.jpg">
+<%
+String error=(String)session.getAttribute("error");
+if(error!=null)
+{
+	session.removeAttribute("error");
+	session.invalidate();
+}
+%>
+
+<div class="bod">
+		<div class="hader">
+       		</div>
+<div class="main">
+		<div class="left">
+			<div class="had"></div>
+				<div class="idd">
+				<div class="user"><h2>User Login</h2></div>
+				<form action="login.jsp" method="post" name="adminLoginForm" >
+				<table class="style1" border="0" height="200px">
+				<tr><td width="250px"><font color="#FFFFFF">Email</font></td></tr>
+				<tr><td><input name="email" type="email"  maxlength="50" size="30" onkeyup="clearLoginMesg()" /></td><td width="100px">
+                <div id="loginMsg"></td>
+				</tr>
+				<tr><td><font color="#FFFFFF">Password</font></td></tr>
+				<tr><td><input name="password" type="password"  maxlength="50" size="30" onkeyup="clearPassMesg()"/></td><td width="50px"><font color="#FF0000"><div id="passMsg"></font></td></tr>
+				<tr><td><input name="submit" type="submit" value="Login" onclick="return chk()"/> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input name="reset" type="reset" value="Clear" /></td>
+				<td><a href="adminLoginPage.jsp">Admin Login</a></td>
+				</tr>
+				</table></form>
+
+				</div>
+						<div class="cupalname"><center><h3>The Happy Couple</h3></center></div>
+						<div class="cupal">
+						<div class="cupal2">
+						<img src="image/boy.jpg" height="150" width="150" />
+						</div>
+						<div class="cupal3">
+						<center><span><h4>Akshay Mishra</h4></span></center>
+					<p>I am an optimistic person with a zest for life and a cosmopolitan upbringing. I am currently working in well known IT company in pune. Enjoys sport, painting, music.</p>
+					</div>
+
+					</div>
+
+
+
+<div class="cupal">
+<div class="cupal2">
+<img src="image/girl.jpg" height="150" width="150" />
+</div>
+<div class="cupal3">
+<center><span><h4>Nikita Sharma</h4></span></center>
+					<p>Fun loving, loves reading, watching movies, traveling.I am currently working in well known IT company. inborn talent and passion for iterior decoration, art and colour coordination.</p>
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div class="right">
+<div class="had2"></div>
+<div class="image1">
+<div class="image">
+<div class="buttop"></div>
+<div class="but"><form action="Newuser.jsp">
+<input type="submit" value="Register Now" /></form></div>
+</div></div>
+<div class="had2"></div>
+<div class="right2">
+<div class="manubox">
+<div class="menu">
+						 <ul>
+							 <li class="active"><a href="index.jsp">Home</a></li> 
+							
+							  <li><a href="Gallry.html">Gallery</a></li>
+							 <li><a href="Contatct.jsp">Contact</a></li>
+							 <div class="clear"></div>
+						</ul>
+					</div>
+
+</div>
+<div class="suc"><h2><center>Success Stories</center></h2></div>
+<div class="impprsn">
+<div class="img"><img src="image/love1.jpg" height="200" width="300" /></div>
+<div class="story">
+<span>Hiii</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate , consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+</div>
+
+<div class="impprsn">
+
+<div class="story">
+<span>Hiii</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate , consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+<div class="img"><img src="image/love3.jpg" height="200" width="300" /></div>
+</div>
+
+
+<div class="impprsn">
+<div class="img"><img src="image/love2.jpg" height="200" width="300" /></div>
+<div class="story">
+<span>Hiii</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate , consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+</div>
+</div></div>
+</div>
+</div>
+<div class="futer"></div>
+</body>
+</html>

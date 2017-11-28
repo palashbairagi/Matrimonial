@@ -1,0 +1,48 @@
+<html>
+<head>
+<script>
+function chk()
+{
+var stat=true;
+if(document.frm.t1.value.length==0)
+{
+document.getElementById("loginmesg").innerHTML="Enter User Name";
+stat=false;
+}
+if(document.frm.t2.value.length==0)
+{
+document.getElementById("passmesg").innerHTML="Enter Password";
+stat=false;
+}
+return(stat);
+}
+function clearLoginMesg()
+{
+if(document.frm.t1.value.length>0)
+{
+document.getElementById("loginmesg").innerHTML=" ";
+}
+}
+function clearPassMesg()
+{
+if(document.frm.t2.value.length>0)
+{
+document.getElementById("passmesg").innerHTML=" ";
+}
+}
+</script>
+</head>
+<body>
+<form method="post" action="./a1.jsp" name="frm">
+<table border="0"><tr><td>User Name</td><td>
+<input type="text" name="t1" size="30" onkeyup="clearLoginMesg()"></td><td width="200">
+<div id='loginmesg'></div></td></tr>
+<tr><td>Password</td><td>
+<input type="password" name="t2" size="30" onkeyup="clearPassMesg()">
+</td><td width="200"><div id='passmesg'></div></td></tr><tr>
+<td colspan="2"><input type="submit" value="Login" onclick="return chk()">
+</td></tr></table>
+</form>
+Java Script form validation 
+<br/>Sourabh Raguvanshi
+</body></html>
